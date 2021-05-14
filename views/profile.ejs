@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title>Update Profile</title>
+   <link rel="shortcut icon" href="/images/icon.jpg">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+</head>
+  <body>
+    <div class="topnav">
+<div class="dropdown">
+ <div class="align-right">
+<a href="/login/dashboard">   <button class="dropbtn">Hi <%=name%>!</button></a>
+  <div class="dropdown-content">
+    <a href="/login/profile">Profile Update</a>
+    <a href="/login/issues">Got any issues?</a>
+    <a href="/login/share">Share with community</a>
+    <a href="/login/read">Read Blogs</a>
+    <a href="/login/logout" id="logout">Logout</a>
+  </div>
+  </div>
+</div>
+</div>
+
+  <div class="container pt-4 my-1">
+        <form action="/login/profile" method="post" >
+                    <div style=" padding: 2%; background-color: #F26B8A; margin-right: 50%; margin-left: 35%; width: 30%; color: white; margin-top: 5%;">
+
+              <label>Period Day</label><br><br>
+              <input type="date" class="form-control" name="periodDay" min="1" max="31" required style=" margin-left: 10%; width: 80%; " ><br>
+                </div>
+                    <div style=" padding: 2%; background-color: #F26B8A; margin-right: 50%; margin-left: 35%; width: 30%; color: white; ">
+
+              <label>Cycle length</label><br><br>
+              <input type="number" class="form-control" name="cycleLength" min="1" max="31" required style=" margin-left: 10%; width: 80%; " ><br>
+                </div>
+                    <div style=" padding: 2%; background-color: #F26B8A; margin-right: 50%; margin-left: 35%; width: 30%; color: white;">
+              
+              <label>Period Length</label><br><br>
+              <input type="number" class="form-control" name="periodLength" min="1" max="31" required style=" margin-left: 10%; width: 80%; " ><br><br><br>
+
+          <input type="submit" value="Update" style=" margin-left: 40%; float: left;">
+        </div>
+          </form>
+        </div>
+
+
+   </body>
+  </html>

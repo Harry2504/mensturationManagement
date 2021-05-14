@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title>Signup</title>
+ <link rel="shortcut icon" href="/images/icon.jpg">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
+  <body>
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="jumbotron text-center" style="background-color:#F26B8A ; color:white; padding: 10px; margin-top: 50px;margin-bottom: 1px; margin-left: 20%; margin-right: 20%;">
+        <h1><span class="fa fa-sign-in"></span> Signup</h1>
+
+        <form action="/signup" method="POST">
+          <div class="form-group">
+              <label style="float:left;">Name</label>
+              <input type="text" class="form-control" name="name" placeholder="John" required>
+          </div>
+
+          <div class="form-group">
+            <label style="float:left;">E-mail</label>
+            <input type="email" class="form-control" name="email" placeholder="abc@gmail.com" required/>
+            <span> <%= message1 %> </span>
+          </div>
+
+          <div class="form-group">
+          <label style="float:left;">Username</label>
+              <input type="text" class="form-control" name="username" placeholder="John" required>
+            <span> <%= message %> </span>
+          </div>
+          
+          <div class="form-group">
+            <label style="float:left;">Password</label>
+            <input type="password" class="form-control" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="UpperCase, LowerCase and Number" required/>
+          </div>
+
+          <div>
+              <button type="search" class="btn btn-md btn-default" >SUBMIT</button>
+          </div>
+        </form>
+      </div>
+      <hr>
+      <span class="fa fa-sign-in" style="margin-left: 38%;"> Already have an account?<a style="color: #F26B8A ;" href="/login"> Login</a></span>
+    </div>
+  </body>
+</html>

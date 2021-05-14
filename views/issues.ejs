@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title>Let's help!</title>
+   <link rel="shortcut icon" href="/images/icon.jpg">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+</head>
+  <body>
+    <div class="topnav">
+<div class="dropdown">
+ <div class="align-right">
+<a href="/login/dashboard">   <button class="dropbtn">Hi <%=name%>!</button></a>
+  <div class="dropdown-content">
+    <a href="/login/profile">Profile Update</a>
+    <a href="/login/issues">Got any issues?</a>
+    <a href="/login/share">Share with community</a>
+    <a href="/login/read">Read Blogs</a>
+    <a href="/login/logout" id="logout">Logout</a>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<div style="float: left">
+  <h1 style="color: #F26B8A; ">What issue you are facing?</h1>
+          <form action="/login/issues" method="post" >
+          <div style="color: #F26B8A; padding:1%;  margin-left: 30%;">
+<div>
+<input type="radio" name="cramp" value="cramp" >Cramps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="/images/cramp.png" height="60px" width="60px"><br>
+</div>
+<br>
+
+<div>
+<input type="radio" name="bloating" value="bloating">Bloating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/bloating.png" height="60px" width="60px"><br>
+</div>
+<br>
+
+<div>
+<input type="radio" name="sore" value="sore">Sore Breasts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="/images/sore.png" height="60px" width="60px"><br>
+</div>
+<br>
+
+<div>
+<input type="radio" name="headache" value="headache">Headache&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="/images/headache.png" height="60px" width="60px"></div>
+<br>
+
+<div>
+<input type="radio" name="nausea" value="nausea">Nausea &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/nausea.png" height="60px" width="60px">
+</div>
+
+<br>
+<input type="submit" value="Solution" style="margin-left: 10%;">
+</div>
+</form>
+
+</div>
+<% if(search_result.length !=''){ %> 
+<table style="margin-top: 15%; background-color: #F26B8A; color: white; border-radius: 25px;">
+                          <tr>
+              <th style="padding: 20px">Preffered Food</th>
+              <TH style="padding: 20px">Avoid Eating</TH>
+              <TH style="padding: 20px">Home Remedy</TH>
+              <TH style="padding: 20px">Medicines</TH>
+            </tr>
+            <tr>
+              <td style="padding: 20px"><%= search_result.preffered%></td>
+              <td style="padding: 20px"><%= search_result.avoid%></td>
+              <td style="padding: 20px"><%= search_result.home%></td>
+              <td style="padding: 20px"><%= search_result.medicine%></td>
+ </tr>
+ </table>
+
+              <%} %>
+
+<div style="float: right">
+</div>
+
+   </body>
+  </html>

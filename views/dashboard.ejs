@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title>Dashboard</title>
+  <link rel="shortcut icon" href="/images/icon.jpg">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+</head>
+  <body>
+    <div class="topnav">
+<div class="dropdown"  >
+ <div class="align-right">
+<a href="/login/dashboard">  <button class="dropbtn">Hi <%=name%>!</button></a>
+  <div class="dropdown-content">
+    <a href="/login/profile">Profile Update</a>
+    <a href="/login/issues">Got any issues?</a>
+    <a href="/login/share">Share with community</a>
+    <a href="/login/read">Read Blogs</a>
+    <a href="/login/logout" id="logout">Logout</a>
+  </div>
+  </div>
+</div>
+</div>
+
+<div style="color: #F26B8A; padding:2%">
+  <div style="float: left">
+  <h1 ><img src=/images/periodstart.png height="60px" width="60px"> &nbsp; Period Starts: <%=startdate%> <%=startmonth%></h1><BR>
+  <h1 ><img src=/images/ovulationstarts.png height="60px" width="60px"> &nbsp; Ovulation happens:<%=ovulationdate%> <%=ovulationmonth%></h1><BR>
+  <h1 ><img src=/images/lastperiod.jpg height="60px" width="60px">&nbsp; Last Period: <%=lastdate%> <%=lastmonth%> </h1><BR>
+ </div>
+  <img src="/images/fittness.jpg" height="300px" style="float: right; margin: 5%; margin-right: 15%;">
+</div>
+
+
+   </body>
+  </html>

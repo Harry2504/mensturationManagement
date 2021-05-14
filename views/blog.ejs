@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title>Blogs</title>
+   <link rel="shortcut icon" href="/images/icon.jpg">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+</head>
+  <body>
+    <div class="topnav">
+<div class="dropdown">
+ <div class="align-right">
+ <a href="/login/dashboard" >  <button class="dropbtn">Hi <%=name%>!</button></a>
+  <div class="dropdown-content" >
+    <a href="/login/profile">Profile Update</a>
+    <a href="/login/issues">Got any issues?</a>
+    <a href="/login/share">Share with community</a>
+    <a href="/login/read">Read Blogs</a>
+    <a href="/login/logout" id="logout">Logout</a>
+  </div>
+  </div>
+</div>
+
+</div>
+<h1 style="color:#F26B8A ">Let's eradicate some Myths!!</h1>
+<div>
+  <div style="float: left;">
+        <% for(var i = 0; i <search_result.length; i++){ %>
+<a href="/login/read/<%= search_result[i].id %>" style="color: white; text-decoration: none;">
+        <div style="background-color: #F26B8A; margin:30px; border-radius: 25px; margin-left: 40%;  padding: 2%;  width: 400px;
+  height: 100px;">
+              <h4><%= search_result[i].title%></h4>
+                          </div></a>
+    
+                          <%} %>
+    </div>
+     <img src="/images/fittness.jpg" height="400px" width ="400px" style="float: right; margin: 5%; margin-right: 5%;">
+       </div>              
+   </body>
+  </html>

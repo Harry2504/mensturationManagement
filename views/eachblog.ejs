@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title><%=title%></title>
+  <link rel="shortcut icon" href="/images/icon.jpg">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+</head>
+  <body>
+    <div class="topnav">
+<div class="dropdown">
+ <div class="align-right">
+  <button class="dropbtn">Hi <%=name%>!</button>
+  <div class="dropdown-content">
+    <a href="/login/profile">Profile</a>
+    <a href="/login/issues">Got any issues?</a>
+    <a href="/login/share">Share with community</a>
+    <a href="/login/read">Read Blogs</a>
+    <a href="/login/logout" id="logout">Logout</a>
+  </div>
+  </div>
+</div>
+
+</div>
+<div style="margin:30px ; padding: 10px;">
+<h1 style="color: #e75480"><%=title%></h1>
+<p style="color: #F26B8A"><%= text%></p>                        
+   </body>
+  </html>

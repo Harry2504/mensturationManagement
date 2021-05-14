@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title>Let's Share!</title>
+   <link rel="shortcut icon" href="/images/icon.jpg">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="/stylesheets/dashboard.css" />
+</head>
+  <body>
+    <div class="topnav">
+<div class="dropdown">
+ <div class="align-right">
+ <a href="/login/dashboard"> <button class="dropbtn">Hi <%=name%>!</button></a>
+  <div class="dropdown-content">
+    <a href="/login/profile">Profile Update</a>
+    <a href="/login/issues">Got any issues?</a>
+    <a href="/login/share">Share with community</a>
+    <a href="/login/read">Read Blogs</a>
+    <a href="/login/logout" id="logout">Logout</a>
+  </div>
+  </div>
+</div>
+
+</div>
+        <form action="/login/share" method="post" >
+          <div style="margin: 1%; padding: 2%; background-color: #F26B8A; margin-right: 50%; margin-left: 35%; width: 30%; color: white; margin-top: 5%;">
+              <label>Title</label><BR>
+              <input type="text" class="form-control" name="title" required>
+            </div>
+<BR>
+<div style="margin: 1%; padding: 2%; background-color: #F26B8A; margin-right: 50%; margin-left: 35%; width: 30%;color: white;">
+              <label>Body</label><BR>
+              <input type="text" class="form-control" name="text" required style="height: 200px; width: 95%;">
+              </div>
+<BR>
+          <input type="submit" value="Post" style=" margin-left: 50%; float: left;" >
+          </form>
+        </div>
+
+
+
+   </body>
+  </html>
